@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <conio.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -24,7 +23,7 @@ int main() {
 
     int codigoCidade, numeroPontosTuristicos;
     char nomeCidade[20];
-    float populacao, PIB, areaCidade;
+    float populacao, PIB, areaCidade, densidadePopulacional, pibPerCapita;
     setlocale(LC_ALL, "Portuguese");
 
     printf("Digite o código da cidade: ");
@@ -41,29 +40,8 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade: ");
     scanf("%d", &numeroPontosTuristicos);
 
-    printf("Nome da cidade: %s\n ", nomeCidade);
-    printf("Código da cidade: %d\n ", codigoCidade);
-    printf("População da cidade: %.2f\n ", populacao);
-    printf("PIB da cidade: %.2f\n", PIB);
-    printf("Area da cidade: %.2fm²\n", areaCidade);
-        int codigoCidade, numeroPontosTuristicos;
-    char nomeCidade[20];
-    float populacao, PIB, areaCidade;
-    setlocale(LC_ALL, "Portuguese");
-
-    printf("Digite o código da cidade: ");
-    scanf("%d", &codigoCidade);
-    printf("Digite o nome da cidade: ");
-    fflush(stdin);
-    scanf("%20[^\n]",nomeCidade);
-    printf("Digite a população da cidade: ");
-    scanf("%f", &populacao);
-    printf("Digite o PIB da cidade: ");
-    scanf("%f", &PIB);
-    printf("Digite a área da cidade: ");
-    scanf("%f", &areaCidade);
-    printf("Digite o número de pontos turísticos da cidade: ");
-    scanf("%d", &numeroPontosTuristicos);
+    densidadePopulacional = populacao / areaCidade;
+    pibPerCapita = PIB / populacao;
 
     printf("Nome da cidade: %s\n ", nomeCidade);
     printf("Código da cidade: %d\n ", codigoCidade);
@@ -71,4 +49,8 @@ int main() {
     printf("PIB da cidade: %.2f\n", PIB);
     printf("Area da cidade: %.2fm²\n", areaCidade);
     printf("Número de pontos turisticos da cidade %d\n", numeroPontosTuristicos);
+    printf("Densidade populacional da cidade %.2f\n", densidadePopulacional);
+    printf("PIB per capita da cidade %.2f\n", pibPerCapita);
+
+    return 0;
 }
