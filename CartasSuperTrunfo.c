@@ -46,7 +46,29 @@ int main() {
     printf("População da cidade: %.2f\n ", populacao);
     printf("PIB da cidade: %.2f\n", PIB);
     printf("Area da cidade: %.2fm²\n", areaCidade);
-    printf("Número de pontos turisticos da cidade %d\n", numeroPontosTuristicos);
+        int codigoCidade, numeroPontosTuristicos;
+    char nomeCidade[20];
+    float populacao, PIB, areaCidade;
+    setlocale(LC_ALL, "Portuguese");
 
-    return 0;
+    printf("Digite o código da cidade: ");
+    scanf("%d", &codigoCidade);
+    printf("Digite o nome da cidade: ");
+    fflush(stdin);
+    scanf("%20[^\n]",nomeCidade);
+    printf("Digite a população da cidade: ");
+    scanf("%f", &populacao);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &PIB);
+    printf("Digite a área da cidade: ");
+    scanf("%f", &areaCidade);
+    printf("Digite o número de pontos turísticos da cidade: ");
+    scanf("%d", &numeroPontosTuristicos);
+
+    printf("Nome da cidade: %s\n ", nomeCidade);
+    printf("Código da cidade: %d\n ", codigoCidade);
+    printf("População da cidade: %.2f\n ", populacao);
+    printf("PIB da cidade: %.2f\n", PIB);
+    printf("Area da cidade: %.2fm²\n", areaCidade);
+    printf("Número de pontos turisticos da cidade %d\n", numeroPontosTuristicos);
 }
